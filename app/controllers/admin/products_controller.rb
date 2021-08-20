@@ -1,4 +1,7 @@
 class Admin::ProductsController < ApplicationController
+  def product_count
+    @prod_count = Product.count
+  end
 
   def index
     @products = Product.order(id: :desc).all
