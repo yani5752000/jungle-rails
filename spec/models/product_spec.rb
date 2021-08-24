@@ -14,11 +14,12 @@ RSpec.describe Product, type: :model do
       @product.quantity = 2
       @product.category = @category
 
-      @product.save!
+      @product.save
 
       expect(@product).to be_present
+      
     end
-    it 'validates' do
+    it 'validates that name is not blank' do
       @category = Category.new
       @product = Product.new
       @product.name = nil
@@ -26,11 +27,10 @@ RSpec.describe Product, type: :model do
       @product.quantity = 2
       @product.category = @category
 
-      @product.save!
-
-      expect(@product.id).to be_present
+      @product.save
+      expect(@product).to_not be_valid
     end
-    it 'validates' do
+    it 'validates that price is not blank' do
       @category = Category.new
       @product = Product.new
       @product.name = "nail"
@@ -38,11 +38,11 @@ RSpec.describe Product, type: :model do
       @product.quantity = 2
       @product.category = @category
 
-      @product.save!
+      @product.save
 
-      expect(@product.id).to be_present
+      expect(@product).to_not be_valid
     end
-    it 'validates' do
+    it 'validates that quantity is not blank' do
       @category = Category.new
       @product = Product.new
       @product.name = "nail"
@@ -50,11 +50,11 @@ RSpec.describe Product, type: :model do
       @product.quantity = nil
       @product.category = @category
 
-      @product.save!
+      @product.save
 
-      expect(@product.id).to be_present
+      expect(@product).to_not be_valid
     end
-    it 'validates' do
+    it 'validates that category is not blank' do
       @category = Category.new
       @product = Product.new
       @product.name = "nail"
@@ -62,9 +62,9 @@ RSpec.describe Product, type: :model do
       @product.quantity = 2
       @product.category = nil
 
-      @product.save!
+      @product.save
 
-      expect(@product.id).to be_present
+      expect(@product).to_not be_valid
     end
   
   end
