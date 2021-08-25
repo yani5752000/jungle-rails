@@ -28,9 +28,11 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Final Product
 
-!["screenshot description"](#)
+!["This is the home page"](https://github.com/yani5752000/jungle-rails/blob/master/docs/Home%20Page.png?raw=true)
 
-!["screenshot description"](#)
+!["This is My Cart page showing what the user has in cart"](https://github.com/yani5752000/jungle-rails/blob/master/docs/My%20Cart.png?raw=true)
+
+!["This is showing where the website is asking for sign in if you want enter as an admin"](https://github.com/yani5752000/jungle-rails/blob/master/docs/Sign%20In%20for%20Admin.png?raw=true)
 
 
 ## Dependencies
